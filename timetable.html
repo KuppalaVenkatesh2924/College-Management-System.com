@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Timetable</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #acb6e5);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .dashboard {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 400px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h2 {
+      color: #2d3436;
+      margin-bottom: 15px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      color: #2d3436;
+    }
+    th {
+      background-color: #6c5ce7;
+      color: white;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #341f97;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #2d1a7c;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <h2>Timetable</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>9AM - 10AM</th>
+          <th>10AM - 11AM</th>
+          <th>11AM - 12PM</th>
+          <th>12PM - 1PM</th>
+        </tr>
+      </thead>
+      <tbody id="timetableBody">
+        <!-- Timetable data dynamically loaded here -->
+      </tbody>
+    </table>
+    <button onclick="backToDashboard()">Back</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
