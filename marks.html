@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Marks</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #fbc7a4, #fe9a8b);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .dashboard {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 400px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h2 {
+      color: #2d3436;
+      margin-bottom: 15px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      color: #2d3436;
+    }
+    th {
+      background-color: #ff7675;
+      color: white;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #d63031;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #b71540;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <h2>Marks</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Marks Obtained</th>
+          <th>Total Marks</th>
+        </tr>
+      </thead>
+      <tbody id="marksTableBody">
+        <!-- Marks data dynamically loaded here -->
+      </tbody>
+    </table>
+    <button onclick="backToDashboard()">Back</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
