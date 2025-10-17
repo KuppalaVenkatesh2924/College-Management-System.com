@@ -6,175 +6,71 @@
     *{margin:0;padding:0;box-sizing:border-box;}
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      background: linear-gradient(135deg, #fbc7a4, #fe9a8b);
       min-height: 100vh;
-      padding: 20px;
-      color: #2d3436;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .dashboard {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 400px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
     }
     h2 {
-      text-align: center;
-      margin-bottom: 25px;
-      font-weight: 700;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      border-radius: 12px;
-      padding: 20px 30px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-    ul {
-      list-style-type: none;
-      margin-bottom: 30px;
-      max-height: 150px;
-      overflow-y: auto;
-      border: 1px solid #ccc;
-      padding: 10px;
-      border-radius: 8px;
-    }
-    ul li {
-      padding: 6px 4px;
-      border-bottom: 1px solid #eee;
-    }
-    form {
-      margin-bottom: 30px;
-      border: 1px solid #ddd;
-      padding: 15px;
-      border-radius: 10px;
-      background: #f9f9f9;
-    }
-    form h3 {
+      color: #2d3436;
       margin-bottom: 15px;
-      color: #d63031;
     }
-    label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
+    h3 {
+      color: #636e72;
+      margin-bottom: 15px;
     }
-    select, input {
-      width: 100%;
-      padding: 8px 10px;
-      margin-bottom: 12px;
+    ul#studentList {
+      list-style: none;
+      text-align: left;
+      max-height: 250px;
+      overflow-y: auto;
+      padding-left: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #dfe6e9;
       border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 14px;
+    }
+    ul#studentList li {
+      padding: 8px 5px;
+      border-bottom: 1px solid #dfe6e9;
+      color: #2d3436;
+      font-weight: 500;
+    }
+    ul#studentList li:last-child {
+      border-bottom: none;
     }
     button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
       background-color: #d63031;
       color: white;
-      border: none;
-      padding: 12px 18px;
-      border-radius: 8px;
       cursor: pointer;
-      font-weight: 700;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-      width: 100%;
+      transition: background 0.3s ease;
     }
     button:hover {
       background-color: #b71540;
     }
-    .logout-btn {
-      display: block;
-      width: 120px;
-      margin: 0 auto;
-      background-color: #6c5ce7;
-      margin-top: 20px;
-    }
-    .logout-btn:hover {
-      background-color: #341f97;
-    }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="dashboard">
     <h2>Admin Dashboard</h2>
     <h3>Registered Students</h3>
     <ul id="studentList"></ul>
-
-    <form id="attendanceForm">
-      <h3>Add Attendance</h3>
-      <label for="attendanceStudent">Select Student Username</label>
-      <select id="attendanceStudent" required></select>
-      <label for="attendanceDate">Date</label>
-      <input type="date" id="attendanceDate" required />
-      <label for="attendanceStatus">Status</label>
-      <select id="attendanceStatus" required>
-        <option value="Present">Present</option>
-        <option value="Absent">Absent</option>
-      </select>
-      <button type="submit">Add Attendance</button>
-    </form>
-
-    <form id="timetableForm">
-      <h3>Add Timetable Class</h3>
-      <label for="timetableStudent">Select Student Username</label>
-      <select id="timetableStudent" required></select>
-      <label for="timetableDay">Day</label>
-      <select id="timetableDay" required>
-        <option value="Monday">Monday</option>
-        <option value="Tuesday">Tuesday</option>
-        <option value="Wednesday">Wednesday</option>
-        <option value="Thursday">Thursday</option>
-        <option value="Friday">Friday</option>
-      </select>
-
-      <label for="slot1">9AM - 10AM</label>
-      <select id="slot1" required>
-        <option value="">Select Subject</option>
-        <option value="C Language">C Language</option>
-        <option value="DBMS">DBMS</option>
-        <option value="SQL">SQL</option>
-        <option value="Data Structures">Data Structures</option>
-        <option value="Python">Python</option>
-        <option value="Java">Java</option>
-        <option value="Break">Break</option>
-      </select>
-
-      <label for="slot2">10AM - 11AM</label>
-      <select id="slot2" required>
-        <option value="">Select Subject</option>
-        <option value="C Language">C Language</option>
-        <option value="DBMS">DBMS</option>
-        <option value="SQL">SQL</option>
-        <option value="Data Structures">Data Structures</option>
-        <option value="Python">Python</option>
-        <option value="Java">Java</option>
-        <option value="Break">Break</option>
-      </select>
-
-      <label for="slot3">11AM - 12PM</label>
-      <select id="slot3" required>
-        <option value="">Select Subject</option>
-        <option value="C Language">C Language</option>
-        <option value="DBMS">DBMS</option>
-        <option value="SQL">SQL</option>
-        <option value="Data Structures">Data Structures</option>
-        <option value="Python">Python</option>
-        <option value="Java">Java</option>
-        <option value="Break">Break</option>
-      </select>
-
-      <label for="slot4">12PM - 1PM</label>
-      <select id="slot4" required>
-        <option value="">Select Subject</option>
-        <option value="C Language">C Language</option>
-        <option value="DBMS">DBMS</option>
-        <option value="SQL">SQL</option>
-        <option value="Data Structures">Data Structures</option>
-        <option value="Python">Python</option>
-        <option value="Java">Java</option>
-        <option value="Break">Break</option>
-      </select>
-
-      <button type="submit">Add Timetable Class</button>
-    </form>
-
-    <button class="logout-btn" onclick="logout()">Logout</button>
+    <button onclick="logout()">Logout</button>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
