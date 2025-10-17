@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Dashboard</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .dashboard {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 360px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h2 {
+      color: #2d3436;
+      margin-bottom: 15px;
+    }
+    #studentInfo {
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: #34495e;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    nav ul li {
+      margin: 10px 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #0984e3;
+      font-weight: 600;
+      font-size: 18px;
+      display: block;
+      padding: 10px;
+      border-radius: 6px;
+      background: #dfe6e9;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    nav ul li a:hover {
+      background: #0984e3;
+      color: white;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #0984e3;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #0652dd;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <h2>Student Dashboard</h2>
+    <div id="studentInfo"></div>
+    <nav>
+      <ul>
+        <li><a href="attendance.html">📅 Attendance</a></li>
+        <li><a href="marks.html">📈 Marks</a></li>
+        <li><a href="timetable.html">📚 Timetable</a></li>
+      </ul>
+    </nav>
+    <button onclick="logout()">Logout</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
