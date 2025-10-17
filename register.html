@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register - College Management</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f6d365, #fda085);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 350px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    input {
+      background: #f1f1f1;
+    }
+    button {
+      background-color: #fd79a8;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #d63031;
+    }
+    h2 {
+      color: #2d3436;
+      margin-bottom: 15px;
+    }
+    p a {
+      color: #fd79a8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    p a:hover {
+      color: #b71540;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Student Registration</h2>
+    <form id="registerForm">
+      <input type="text" id="regUsername" placeholder="Username" required>
+      <input type="password" id="regPassword" placeholder="Password" required>
+      <input type="text" id="regRoll" placeholder="Roll Number" required>
+      <input type="text" id="regCourse" placeholder="Course" required>
+      <button type="submit">Register</button>
+      <p>Already registered? <a href="index.html">Login</a></p>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
